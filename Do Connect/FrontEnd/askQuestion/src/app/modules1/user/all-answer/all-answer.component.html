@@ -1,0 +1,56 @@
+<p *ngIf="!size" class="suggest">No Answer Posted Yet.</p>
+<p *ngIf="!size" class="suggest">Be first to Post Answer</p>
+
+<div class="container-fluid"  *ngIf="size" class="suggest">
+    <div class="row">
+        <div class="col-md-1 col1 column1">
+            <p style="padding-top:20px;padding-left:10px;">No.
+            </p>
+          </div> 
+        <div class="col-md-2 col2">
+            <p style="padding-top:20px; padding-left:20px;">Posted By</p>
+          </div>
+      <div class="col-md-4 col3">
+        <p style="padding-top:20px; padding-left:20px;">Answer</p>
+      </div>
+      <div class="col-md-2 col4">
+        <p style="padding-top:20px; padding-left:20px;">Topic
+        </p>
+      </div>
+
+      <div class="col-md-1 col5">
+        <p style="padding-top:20px; padding-left:10px; color: black;">Status</p>
+      </div>    
+
+      <div class="col-md-2 col6">
+        <p style="padding-top:20px; padding-left:10px; color: black; width: 50px;">Email</p>
+      </div>    
+    </div>
+  </div>
+
+<div class="container-fluid" *ngFor="let answer of answers">
+    <div class="row">
+        <div class="col-md-1 column1">
+            <p style="padding-top:20px;padding-left:10px;">{{answer.id}}
+            </p>
+          </div>
+        <div class="col-md-2">
+            <p style="padding-top:20px; padding-left:20px;">{{answer.answerUser.name}}</p>
+          </div>
+      <div class="col-4 ">
+        <p style="padding-top:20px; padding-left:20px;">{{answer.answer}}</p>
+      </div>
+      <div class="col-2 ">
+        <p style="padding-top:20px; padding-left:20px;">{{answer.question.topic}}</p>
+      </div>
+
+      <div class="col-md-1">
+        <p style="padding-top:20px; padding-left:10px; color: black;">{{answer.isApproved}}</p>
+      </div>   
+      
+      <div class="col-1">
+        <p style="padding-top:20px; padding-left:10px; color: black;">{{answer.answerUser.email}}</p>
+      </div> 
+
+    </div>
+  </div>

@@ -1,0 +1,22 @@
+<p style="margin-bottom: 0%;">
+    <mat-toolbar color="primary">
+      
+      <span>Ask Question</span>
+      <span class="example-spacer"></span>
+      <form #search="ngForm" (ngSubmit)="query(search.value)">
+        <div class="input-group rounded">
+          <input type="text" name="search" #search="ngModel" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" ngModel/>
+          <button><span class="input-group-text border-0" id="search-addon">
+            <i class="fas fa-search"></i>
+          </span></button>&nbsp; &nbsp; &nbsp;
+        </div>
+      </form>
+
+      <button mat-raised-button class="px-5" routerLink="/user/askQuestion" style="margin-right: 50px;"><a >Add Question</a></button>
+      <button mat-raised-button class="px-5" (click)="logout()"><a >Logout</a></button>
+
+
+
+    </mat-toolbar>
+  </p>
+  

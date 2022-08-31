@@ -1,0 +1,39 @@
+.col1{
+    background-color: #b3cccc;
+}
+.col2{
+    background-color: #94b8b8;
+}
+.col3{
+    background-color: #85adad;
+}
+.col4{
+    background-color: #75a3a3;
+}
+.col5{
+    background-color: #669999;
+}
+.col6{
+    background-color: #5c8a8a;
+}
+.col7{
+    background-color: #669999;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    color: #ffff;
+    margin-left:10px;
+}
+
+.btn{
+    width: 120px;
+    margin-top: 10px;
+}
+.suggest{
+    margin-left: 32%;
+    margin-top: 100px;
+    font-size: 60px;
+}

@@ -1,0 +1,28 @@
+<div class="container my-4">
+    <h3 style="text-align: center">Welcome NameAdmin</h3>
+  </div>
+  <div class="body">
+    <div class="addAnswer">
+      <form #addAns="ngForm" (ngSubmit)="addAnswer(addAns.value)">
+       
+        <div class="mb-3 padding">
+          <label for="exampleFormControlTextarea1" class="form-label"
+            >Post Your Answer</label
+          >
+          <textarea
+            ngModel
+            name="question"
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="15"
+            required
+          ></textarea>
+        </div>
+  
+        <div class="addAnswerButton">
+          <button type="submit" class="btn btn-outline-primary">Submit</button>
+        </div>
+    </form>
+    </div>
+  </div>
+  

@@ -1,0 +1,49 @@
+<div class="container my-4">
+    <h3 style="text-align: center">Welcome {{userName}} to the Answer portal</h3>
+  </div>
+  <div class="body">
+    <div class="askQuestion">
+      <form #Answer="ngForm" (ngSubmit)="postAnswer(Answer.value)">
+        <div>
+          <h3>Post your Answer</h3>
+        </div>
+        <!-- <div class="padding">
+          <select
+            ngModel
+            name="topic"
+            #topic="ngModel"
+            class="form-select"
+            aria-label="Default select example"
+            required
+          >
+            <option selected disabled>Choose Title</option>
+            <option value="Java">Java</option>
+            <option value="Python">Python</option>
+            <option value="C++">C++</option>
+            <option value="C">C</option>
+            <option value="DevOps">DevOps</option>
+            <option value="SQL">SQL</option>
+          </select>
+        </div> -->
+        <div class="mb-3 padding">
+          <label for="exampleFormControlTextarea1" class="form-label"
+            >Write your answer in the below textbox.</label
+          >
+          <textarea
+            ngModel
+            name="question"
+            #question="ngModel"
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="6"
+            required
+          ></textarea>
+        </div>
+  
+        <div class="askQuestionButton">
+          <button type="submit" class="btn btn-outline-primary">Submit</button>
+        </div>
+    </form>
+    </div>
+  </div>
+  

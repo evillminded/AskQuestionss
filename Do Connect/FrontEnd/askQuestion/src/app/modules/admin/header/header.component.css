@@ -1,0 +1,15 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  
+  .mat-raised-button{
+    margin-left:50px;
+  }
+
+  a{
+    text-decoration: none;
+  }
+  button{
+    color: white;
+    background: rgb(57, 54, 234);
+  }

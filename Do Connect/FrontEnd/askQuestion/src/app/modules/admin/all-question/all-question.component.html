@@ -1,0 +1,62 @@
+<p *ngIf="!size" class="suggest">No Questions Posted Yet.</p>
+<div class="container-fluid" *ngIf="size  ">
+  <div class="row">
+      <div class="col-md-1 col1 column1">
+          <p style="padding-top:20px;padding-left:10px;">No.
+          </p>
+        </div> 
+      <div class="col-md-2 col2">
+          <p style="padding-top:20px; padding-left:20px;">Posted By</p>
+        </div>
+    <div class="col-4 col3">
+      <p style="padding-top:20px; padding-left:20px;">Question</p>
+    </div>
+    <div class="col-2 col4">
+      <p style="padding-top:20px; padding-left:20px;">Topic
+      </p>
+    </div>
+
+    <div class="col-md-1 col5">
+      <p style="padding-top:20px; padding-left:10px; color: black;">Status</p>
+    </div>    
+
+    <div class="col-md-1 col6">
+      <p style="padding-top:20px; padding-left:10px; color: black; width: 50px;">Check</p>
+    </div>  
+    <div class="col-md-1 col5">
+      <p style="padding-top:20px; padding-left:10px; color: black; width: 50px;">Action</p>
+    </div>
+    
+  </div>
+</div>
+
+<div class="container-fluid" *ngFor="let question of questions">
+    <div class="row">
+        <div class="col-md-1 ">
+            <p style="padding-top:20px;padding-left:10px;">{{question.id}}
+   </p>
+          </div>
+        <div class="col-md-1 ">
+            <p style="padding-top:20px; padding-left:20px;">{{question.user.name}}</p>
+          </div>
+      <div class="col-4 question">
+        <p style="padding-top:20px; padding-left:20px;">{{question.question}}</p>
+      </div>
+      <div class="col-2">
+        <p style="padding-top:20px; padding-left:20px;">{{question.topic}}</p>
+      </div>
+
+      <div class="col-md-1">
+        <p style="padding-top:20px; padding-left:20px; margin-left: 20px; color: red;" *ngIf="!question.isApproved">Pending</p>
+        <p style="padding-top:20px; padding-left:20px; margin-left: 20px; color: green;" *ngIf="question.isApproved">Approved</p>
+
+      </div>
+      <div class="col-md-1">
+        <p style="padding-top:20px; padding-left:10px;"><button class="btn btn-warning" style="margin-left: 25px;" (click)="approveQuestion(question.id)" [disabled]="question.isApproved">Approve</button></p>
+      </div>
+
+      <div class="col-md-1">
+        <p style="padding-top:20px; padding-left:10px;"><button class="btn btn-danger" style="margin-left: 25px;" (click)="deleteQuestion(question.id)">Delete</button></p>
+      </div>
+    </div>
+  </div>
